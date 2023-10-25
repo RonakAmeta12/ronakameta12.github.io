@@ -1,0 +1,22 @@
+html {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+ .custom-card {
+        max-width: 110px; /* Adjust the maximum width as needed */
+        
+        
+    }
+    .img {
+      width: 40px;
+      margin-left: 40px;
+      bottom: 55px;
+      left: 50px;
+    }
+    .google {
+      height: 50px;
+    }
+    #clock {
+      font-family: 'Nunito sans', Sans-Serif;
+    }
+    

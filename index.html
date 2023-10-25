@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <title>
+      my homepage
+    </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap" rel="stylesheet">
+<link href="Home.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Google</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-bg-light mx-2 " href="Youtube.html">Youtube</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-bg-light" href="https://www.bing.com/search">Bing</a>
+  </li>
+
+</ul>
+    
+    
+    <form action="https://www.google.com/search" class="searchform " method="get" name="searchform" target="_blank">
+
+<input autocomplete="on" class="form-control search my-4 rounded-pill border-light google  " name="q" placeholder="Search on Google" required="required"  type="text">
+<button class="btn btn-dark my-1 rounded-pill btn-outline-light" type="submit">Search</button>
+</form>
+<a href="https://m.youtube.com/">
+<img class=" my-3 position-relative p-xl-5 mt-xl-auto img" src="youtube.png" alt="youtube"></a>
+
+  <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card custom- card">
+                    <div class="card-body text-center">
+                        <h1 id="clock" class="display-1  ">00:00:00 AM</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function updateTime() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12; // Convert to 12-hour format
+
+            const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+    
+<a class="weatherwidget-io" href="https://forecast7.com/en/24d5973d71/udaipur/" data-label_1="UDAIPUR" data-label_2="Weather" data-mode="Current" data-theme="dark" >UDAIPUR Weather</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+  </body>
+  
+</html>
